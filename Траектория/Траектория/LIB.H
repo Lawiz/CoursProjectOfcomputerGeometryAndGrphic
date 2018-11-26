@@ -2,7 +2,6 @@
 #define LIBGRAPH 1
 #include "Math.h"
 const double pi=3.14159;
-//typedef double (*pfunc)(double);	// ”казатель на функцию
 
 struct CSizeD
 {

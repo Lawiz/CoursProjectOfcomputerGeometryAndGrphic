@@ -14,6 +14,7 @@
     <ProjectGuid>{085AAE5C-3432-4665-BA79-4FE7335F203F}</ProjectGuid>
     <RootNamespace>Траектория</RootNamespace>
     <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -21,6 +22,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -107,9 +109,9 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Настройки.h" />
-    <ClInclude Include="Траектория.h" />
-    <ClInclude Include="Полет.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Trajectory.h" />
+    <ClInclude Include="Flight.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChildView.cpp" />
@@ -121,9 +123,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Настройки.cpp" />
-    <ClCompile Include="Траектория.cpp" />
-    <ClCompile Include="Полет.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Trajectory.cpp" />
+    <ClCompile Include="Flight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Траектория.rc" />

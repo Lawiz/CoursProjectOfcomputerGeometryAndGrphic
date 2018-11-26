@@ -3,9 +3,9 @@
 //
 
 #include "stdafx.h"
-#include "Траектория.h"
+#include "Trajectory.h"
 #include "ChildView.h"
-#include "Настройки.h"
+#include "Config.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -16,7 +16,7 @@
 CChildView::CChildView()
 {
 	ОК.SetRect(20,20,1020,520);
-	Анимация=false;
+	Anemation=false;
 	V=100;
 	fi=60;
 }
@@ -61,16 +61,16 @@ void CChildView::OnPaint()
 
 void CChildView::OnKeyDown(UINT nChar,UINT nRepCount,UINT nFlags){
 	if(nChar==32){ //перезапуск
-		if(Анимация){
+		if(Anemation){
 			KillTimer(1);
-			Анимация=false;
+			Anemation=false;
 		}
 		else{
-			П.Сброс();
-			П.Скорость=V;
-			П.Угол=fi;
+			Flight.Reset();
+			Flight.Speed=V;
+			Flight.Angele=fi;
 			SetTimer(1,30,NULL);
-			Анимация=true;
+			Anemation=true;
 		}
 
 	}
@@ -78,14 +78,14 @@ void CChildView::OnKeyDown(UINT nChar,UINT nRepCount,UINT nFlags){
 }
 
 void CChildView::OnTimer(UINT flag){
-	if(Анимация){
-		if(П.Точки(1,П.ЧислоТочек-1)<=0 && П.ЧислоТочек>1){
-			П.ЧислоТочек--;
-			Анимация=false;
+	if(Anemation){
+		if(Flight.Points(1,П.ЧислоТочек-1)<=0 && П.ЧислоТочек>1){
+			Flight.PointsCount--;
+			Anemation=false;
 			KillTimer(1);
 		}
 		else{
-			П.Лететь();
+			Flight.Fly();
 		}
 		Invalidate();
 	}
@@ -95,10 +95,10 @@ void CChildView::On32771()
 {
 	Настройки Настр;
 	if(Настр.DoModal()==IDOK){
-		V=Настр.Скорость();
-		fi=Настр.Угол();
-		П.Скорость=V;
-		П.Угол=fi;
+		V=Настр.Speed();
+		fi=Настр.Angele();
+		П.Speed=V;
+		П.Angele=fi;
 		Invalidate();
 	}
 }
@@ -106,9 +106,9 @@ void CChildView::On32771()
 
 void CChildView::On32772()
 {
-	П.Сброс();
-	П.Скорость=V;
-	П.Угол=fi;
+	П.Reset();
+	П.Speed=V;
+	П.Angele=fi;
 	SetTimer(1,30,NULL);
-	Анимация=true;
+	Anemation=true;
 }

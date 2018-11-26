@@ -4,33 +4,33 @@
 
 
 #pragma once
-#include "Полет.h"
+#include "Flight.h"
 // окно CChildView
 
 class CChildView : public CWnd
 {
-// Создание
+// Creating
 public:
 	CChildView();
 
-// Атрибуты
+// Attrs
 public:
-	Полет П;
+	Flight Flight;
 	double V,fi;
 	CRect ОК;
-	bool Анимация;
-// Операции
+	bool Anemation;
+// Operation
 public:
 
-// Переопределение
+// Oweride
 	protected:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
-// Реализация
+// Implimentation
 public:
 	virtual ~CChildView();
 
-	// Созданные функции схемы сообщений
+	// Create function for shemes of messages
 protected:
 	afx_msg void OnPaint();
 	afx_msg void OnKeyDown(UINT nChar,UINT nRepCount,UINT nFlags);

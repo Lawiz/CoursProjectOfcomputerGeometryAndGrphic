@@ -24,9 +24,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Траектория.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -48,20 +45,20 @@
     <ClInclude Include="LIB.H">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Настройки.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="MYGDI.H">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Полет.h">
+    <ClInclude Include="Config.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Flight.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Trajectory.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Траектория.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -77,13 +74,16 @@
     <ClCompile Include="LIB.CPP">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Настройки.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="MYGDI.CPP">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Полет.cpp">
+    <ClCompile Include="Flight.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Trajectory.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
